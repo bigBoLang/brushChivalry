@@ -1,0 +1,4 @@
+2025-04-13 19:11:30.237 | INFO     | utils.xiayi:capture_window:110 - 截图区域: (-32000, -32000) -> (-31840, -31972)
+2025-04-13 19:11:30.278 | INFO     | utils.xiayi:capture_and_recognize_text:341 - 已保存截图到 C:\Users\Administrator\xiayi\imgs\capture.png
+2025-04-13 19:12:27.028 | INFO     | utils.xiayi:capture_window:110 - 截图区域: (-32000, -32000) -> (-31840, -31972)
+2025-04-13 19:12:27.072 | INFO     | utils.xiayi:capture_and_recognize_text:341 - 已保存截图到 C:\Users\Administrator\xiayi\imgs\capture.png

@@ -8,11 +8,13 @@ from loguru import logger
 
 from utils import xiayi
 
+
 # logger.add('logs/dahao_{time:YYYY-MM-DD}.log', rotation="200 MB")  # 每个文件200M
 def setup_logger(log_queue):
     logger.remove()  # 移除默认的日志处理器
     logger.add("logs/dahao_{time:YYYY-MM-DD}.log", rotation="200 MB")  # 每个文件200M
     logger.add(lambda msg: log_queue.put(msg), level="INFO")  # 将日志输出到队列
+
 
 # pyinstaller --name="dahao_controller" --windowed --onefile --clean --exclude PyQt5 --exclude PyQt6 --debug all dahao_controller.py
 
@@ -66,9 +68,10 @@ def go_system_window_and_wait(hwnd):
                 text = xiayi.capture_and_recognize_text(120, 700, 495, 869, hwnd)
                 text = str(text)
                 flag = chuli(text, level, count, txt_file, hwnd)
+            logger.info('flag:{}', flag)
+            time.sleep(2)
             if flag:
                 break
-            time.sleep(5)
 
 
 def chuli(text, level, count, txt_file, hwnd):
@@ -145,6 +148,7 @@ def main():
         if not hwnd:
             return False
 
+        time.sleep(2)
         # # 在系统邀请界面等待
         go_system_window_and_wait(hwnd)
         # while True:
@@ -152,7 +156,7 @@ def main():
         #     time.sleep(1)
         # return True  # 执行成功返回True
 
-        time.sleep(2)  # 模拟任务执行时间
+        # time.sleep(2)  # 模拟任务执行时间
 
 
 if __name__ == "__main__":
