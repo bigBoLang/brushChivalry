@@ -366,6 +366,21 @@ def ensure_directory_exists(sub_dir, parent_dir=project_root):
     else:
         print(f"目录已存在: {full_path}")
 
+def init():
+    # 找到目标窗口
+    hwnd = get_window_by_title_prefix("墨迹大侠")
+
+    if not hwnd:
+        logger.info("未找到墨迹大侠窗口")
+        return False  # 返回False表示未找到窗口
+
+    title = win32gui.GetWindowText(hwnd)
+    logger.info(f"找到窗口: {title}")
+
+    # # 设置窗口大小和位置
+    set_window_pos(hwnd, -6, 0, 568, 1033)
+    time.sleep(1)
+    return hwnd
 
 def main():
     # image_path = 'capture.png'  # 确保这个路径是正确的
