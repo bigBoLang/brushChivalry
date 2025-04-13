@@ -1,4 +1,5 @@
 import os
+import random
 import time
 from pathlib import Path
 from pprint import pprint
@@ -353,6 +354,40 @@ def capture_and_recognize_text(x1, y1, x2, y2, hwnd, loc=False):
 #     print(f"项目根目录: {project_root}")
 #     return project_root
 
+def recognize_and_click(text, hwnd, key):
+    res = get_loc_by_text(text[0], key)
+    if res is None:
+        return
+    x, y = get_random_point(res)
+    # pprint(x, y)
+    x = int(x)
+    y = int(y)
+    click_at(x, y, hwnd)
+
+
+def get_loc_by_text(data_list, text):
+    for data in data_list:
+        if data[1][0] == text:
+            return data[0]
+    return None
+
+
+def get_random_point(corners):
+    # 提取 x 和 y 坐标
+    x_coords = [point[0] for point in corners]
+    y_coords = [point[1] for point in corners]
+
+    # 计算边界
+    min_x = min(x_coords)
+    max_x = max(x_coords)
+    min_y = min(y_coords)
+    max_y = max(y_coords)
+
+    # 生成随机点
+    random_x = random.uniform(min_x, max_x)
+    random_y = random.uniform(min_y, max_y)
+
+    return random_x, random_y
 
 def ensure_directory_exists(sub_dir, parent_dir=project_root):
     # 构建完整的子目录路径
