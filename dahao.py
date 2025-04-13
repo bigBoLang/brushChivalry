@@ -8,8 +8,11 @@ from loguru import logger
 
 from utils import xiayi
 
-logger.add('logs/dahao_{time:YYYY-MM-DD}.log', rotation="200 MB")  # 每个文件200M
-
+# logger.add('logs/dahao_{time:YYYY-MM-DD}.log', rotation="200 MB")  # 每个文件200M
+def setup_logger(log_queue):
+    logger.remove()  # 移除默认的日志处理器
+    logger.add("logs/dahao_{time:YYYY-MM-DD}.log", rotation="200 MB")  # 每个文件200M
+    logger.add(lambda msg: log_queue.put(msg), level="INFO")  # 将日志输出到队列
 
 # pyinstaller --name="dahao_controller" --windowed --onefile --clean --exclude PyQt5 --exclude PyQt6 --debug all dahao_controller.py
 
@@ -27,39 +30,45 @@ def go_system_window_and_wait(hwnd):
     txt_file = os.path.join(xiayi.project_root, 'progress', txt_file)
     xiayi.append_nothing_to_txt("", txt_file)
 
-    # 读取文本
-    last_line = xiayi.read_txt(txt_file, last_line_only=True)
-    # logger.info("整个文件:", last_line)
-    if last_line == '':
-        last_line = '1 0'
-    # 内容映射
-    logger.info("最后一行", str(last_line))
-    last_level = last_line.split(" ")
-    level = int(last_level[0])
-    count = int(last_level[1])
-    if count == 2 or count == 3:
-        level = int(last_level[0]) + 1
-        count = 0
+    for i in range(10):
+        # 读取文本
+        last_line = xiayi.read_txt(txt_file, last_line_only=True)
+        # logger.info("整个文件:", last_line)
+        if last_line == '':
+            last_line = '1 0'
+        # 内容映射
+        logger.info("最后一行", str(last_line))
+        if str(last_line) == '5 2':
+            logger.info('今天的侠义已经刷完啦！！！')
+            break
+        last_level = last_line.split(" ")
+        level = int(last_level[0])
+        count = int(last_level[1])
+        if count == 2:
+            level = int(last_level[0]) + 1
+            count = 0
 
-    xiayi.print_list(xiayi.XIAYI_DICT2[level])
+        xiayi.print_list(xiayi.XIAYI_DICT2[level])
 
-    # 去系统界面
-    goto_system_window(hwnd)
+        # 去系统界面
+        goto_system_window(hwnd)
 
-    # 每秒识别一下是否是自己需要的资源
-    while True:
-        text = xiayi.capture_and_recognize_text(120, 700, 495, 869, hwnd)
-        text = str(text)
-        if text != '' and xiayi.xiayi_list_contain_judge(xiayi.XIAYI_DICT2[level], text) and text.find(
-                '点击加入') > -1 and xiayi.xiayi_list_contain_judge(xiayi.NAMES, text) == True:
-            chuli(text, level, count, txt_file, hwnd)
-        else:
-            xiayi.drag(50, 200, 50, 500, hwnd)
-            # 截图并文字识别出当前邀请是否是自己需要的资源
+        # 每秒识别一下是否是自己需要的资源
+        while True:
             text = xiayi.capture_and_recognize_text(120, 700, 495, 869, hwnd)
             text = str(text)
-            chuli(text, level, count, txt_file, hwnd)
-        time.sleep(3)
+            if text != '' and xiayi.xiayi_list_contain_judge(xiayi.XIAYI_DICT2[level], text) and text.find(
+                    '点击加入') > -1 and xiayi.xiayi_list_contain_judge(xiayi.NAMES, text) == True:
+                flag = chuli(text, level, count, txt_file, hwnd)
+            else:
+                xiayi.drag(50, 200, 50, 500, hwnd)
+                # 截图并文字识别出当前邀请是否是自己需要的资源
+                text = xiayi.capture_and_recognize_text(120, 700, 495, 869, hwnd)
+                text = str(text)
+                flag = chuli(text, level, count, txt_file, hwnd)
+            if flag:
+                break
+            time.sleep(5)
 
 
 def chuli(text, level, count, txt_file, hwnd):
@@ -96,11 +105,14 @@ def chuli(text, level, count, txt_file, hwnd):
         xiayi.append_to_txt(text, txt_file)
         # 继续去系统界面等待
         time.sleep(1)
-        goto_system_window(hwnd)
+        return True
+        # goto_system_window(hwnd)
+    return False
 
 
 def goto_system_window(hwnd):
     # 先定位到系统界面
+    logger.info('跳转到系统界面!!!!')
     xiayi.click_at(392, 908, hwnd)
     xiayi.click_at(475, 226, hwnd)
 

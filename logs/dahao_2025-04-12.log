@@ -1,0 +1,179 @@
+2025-04-12 11:35:37.082 | INFO     | utils.xiayi:set_window_pos:231 - 已设置窗口 '墨迹大侠-波浪1' (句柄: 1052144):
+2025-04-12 11:35:37.083 | INFO     | utils.xiayi:set_window_pos:232 - 位置: (-6, 0)
+2025-04-12 11:35:37.083 | INFO     | utils.xiayi:set_window_pos:233 - 大小: 568 x 1033
+2025-04-12 11:35:37.083 | INFO     | utils.xiayi:set_window_pos:234 - 已设置为始终保持在最前端
+2025-04-12 11:35:38.083 | INFO     | utils.xiayi:append_nothing_to_txt:262 - 追加文件时出错: [Errno 2] No such file or directory: 'progress/20250411.txt'
+2025-04-12 11:35:38.083 | INFO     | utils.xiayi:read_txt:284 - 文件不存在: progress/20250411.txt
+2025-04-12 11:41:12.470 | INFO     | utils.xiayi:set_window_pos:231 - 已设置窗口 '墨迹大侠-波浪1' (句柄: 1052144):
+2025-04-12 11:41:12.470 | INFO     | utils.xiayi:set_window_pos:232 - 位置: (-6, 0)
+2025-04-12 11:41:12.470 | INFO     | utils.xiayi:set_window_pos:233 - 大小: 568 x 1033
+2025-04-12 11:41:12.471 | INFO     | utils.xiayi:set_window_pos:234 - 已设置为始终保持在最前端
+2025-04-12 11:41:13.471 | INFO     | utils.xiayi:append_nothing_to_txt:259 - 文本已追加到: progress/20250411.txt
+2025-04-12 11:41:13.472 | INFO     | utils.xiayi:read_txt:278 - 已读取文件最后一行: progress/20250411.txt
+2025-04-12 11:41:14.297 | INFO     | utils.xiayi:capture_window:93 - 截图区域: (114, 700) -> (489, 869)
+2025-04-12 11:41:19.373 | INFO     | utils.xiayi:set_window_pos:231 - 已设置窗口 '墨迹大侠-波浪1' (句柄: 1052144):
+2025-04-12 11:41:19.373 | INFO     | utils.xiayi:set_window_pos:232 - 位置: (-6, 0)
+2025-04-12 11:41:19.373 | INFO     | utils.xiayi:set_window_pos:233 - 大小: 568 x 1033
+2025-04-12 11:41:19.373 | INFO     | utils.xiayi:set_window_pos:234 - 已设置为始终保持在最前端
+2025-04-12 11:41:20.374 | INFO     | utils.xiayi:append_nothing_to_txt:259 - 文本已追加到: progress/20250411.txt
+2025-04-12 11:41:20.374 | INFO     | utils.xiayi:read_txt:278 - 已读取文件最后一行: progress/20250411.txt
+2025-04-12 11:41:21.183 | INFO     | utils.xiayi:capture_window:93 - 截图区域: (114, 700) -> (489, 869)
+2025-04-12 11:41:26.235 | INFO     | utils.xiayi:set_window_pos:231 - 已设置窗口 '墨迹大侠-波浪1' (句柄: 1052144):
+2025-04-12 11:41:26.236 | INFO     | utils.xiayi:set_window_pos:232 - 位置: (-6, 0)
+2025-04-12 11:41:26.236 | INFO     | utils.xiayi:set_window_pos:233 - 大小: 568 x 1033
+2025-04-12 11:41:26.236 | INFO     | utils.xiayi:set_window_pos:234 - 已设置为始终保持在最前端
+2025-04-12 11:41:27.237 | INFO     | utils.xiayi:append_nothing_to_txt:259 - 文本已追加到: progress/20250411.txt
+2025-04-12 11:41:27.237 | INFO     | utils.xiayi:read_txt:278 - 已读取文件最后一行: progress/20250411.txt
+2025-04-12 11:41:28.049 | INFO     | utils.xiayi:capture_window:93 - 截图区域: (114, 700) -> (489, 869)
+2025-04-12 11:59:27.564 | INFO     | utils.xiayi:set_window_pos:232 - 已设置窗口 '墨迹大侠-波浪1' (句柄: 1052144):
+2025-04-12 11:59:27.565 | INFO     | utils.xiayi:set_window_pos:233 - 位置: (-6, 0)
+2025-04-12 11:59:27.565 | INFO     | utils.xiayi:set_window_pos:234 - 大小: 568 x 1033
+2025-04-12 11:59:27.565 | INFO     | utils.xiayi:set_window_pos:235 - 已设置为始终保持在最前端
+2025-04-12 11:59:28.566 | INFO     | utils.xiayi:append_nothing_to_txt:260 - 文本已追加到: progress/20250411.txt
+2025-04-12 11:59:28.566 | INFO     | utils.xiayi:read_txt:279 - 已读取文件最后一行: progress/20250411.txt
+2025-04-12 11:59:29.392 | INFO     | utils.xiayi:capture_window:94 - 截图区域: (114, 700) -> (489, 869)
+2025-04-12 12:05:52.015 | INFO     | utils.xiayi:set_window_pos:221 - 已恢复最小化窗口
+2025-04-12 12:05:52.135 | INFO     | utils.xiayi:set_window_pos:240 - 已设置窗口 '墨迹大侠-波浪1' (句柄: 1052144):
+2025-04-12 12:05:52.135 | INFO     | utils.xiayi:set_window_pos:241 - 位置: (-6, 0)
+2025-04-12 12:05:52.135 | INFO     | utils.xiayi:set_window_pos:242 - 大小: 568 x 1033
+2025-04-12 12:05:52.135 | INFO     | utils.xiayi:set_window_pos:243 - 已设置为始终保持在最前端
+2025-04-12 12:05:53.136 | INFO     | utils.xiayi:append_nothing_to_txt:268 - 文本已追加到: progress/20250411.txt
+2025-04-12 12:05:53.136 | INFO     | utils.xiayi:read_txt:287 - 已读取文件最后一行: progress/20250411.txt
+2025-04-12 12:05:53.942 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (114, 700) -> (489, 869)
+2025-04-12 12:05:59.007 | INFO     | utils.xiayi:set_window_pos:240 - 已设置窗口 '墨迹大侠-波浪1' (句柄: 1052144):
+2025-04-12 12:05:59.007 | INFO     | utils.xiayi:set_window_pos:241 - 位置: (-6, 0)
+2025-04-12 12:05:59.007 | INFO     | utils.xiayi:set_window_pos:242 - 大小: 568 x 1033
+2025-04-12 12:05:59.007 | INFO     | utils.xiayi:set_window_pos:243 - 已设置为始终保持在最前端
+2025-04-12 12:06:00.008 | INFO     | utils.xiayi:append_nothing_to_txt:268 - 文本已追加到: progress/20250411.txt
+2025-04-12 12:06:00.008 | INFO     | utils.xiayi:read_txt:287 - 已读取文件最后一行: progress/20250411.txt
+2025-04-12 12:06:00.825 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (114, 700) -> (489, 869)
+2025-04-12 12:06:05.877 | INFO     | utils.xiayi:set_window_pos:240 - 已设置窗口 '墨迹大侠-波浪1' (句柄: 1052144):
+2025-04-12 12:06:05.877 | INFO     | utils.xiayi:set_window_pos:241 - 位置: (-6, 0)
+2025-04-12 12:06:05.877 | INFO     | utils.xiayi:set_window_pos:242 - 大小: 568 x 1033
+2025-04-12 12:06:05.877 | INFO     | utils.xiayi:set_window_pos:243 - 已设置为始终保持在最前端
+2025-04-12 12:06:06.878 | INFO     | utils.xiayi:append_nothing_to_txt:268 - 文本已追加到: progress/20250411.txt
+2025-04-12 12:06:06.878 | INFO     | utils.xiayi:read_txt:287 - 已读取文件最后一行: progress/20250411.txt
+2025-04-12 12:06:07.691 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (114, 700) -> (489, 869)
+2025-04-12 12:06:12.742 | INFO     | utils.xiayi:set_window_pos:240 - 已设置窗口 '墨迹大侠-波浪1' (句柄: 1052144):
+2025-04-12 12:06:12.743 | INFO     | utils.xiayi:set_window_pos:241 - 位置: (-6, 0)
+2025-04-12 12:06:12.743 | INFO     | utils.xiayi:set_window_pos:242 - 大小: 568 x 1033
+2025-04-12 12:06:12.743 | INFO     | utils.xiayi:set_window_pos:243 - 已设置为始终保持在最前端
+2025-04-12 12:06:13.743 | INFO     | utils.xiayi:append_nothing_to_txt:268 - 文本已追加到: progress/20250411.txt
+2025-04-12 12:06:13.743 | INFO     | utils.xiayi:read_txt:287 - 已读取文件最后一行: progress/20250411.txt
+2025-04-12 12:06:14.558 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (114, 700) -> (489, 869)
+2025-04-12 12:06:19.593 | INFO     | utils.xiayi:set_window_pos:240 - 已设置窗口 '墨迹大侠-波浪1' (句柄: 1052144):
+2025-04-12 12:06:19.593 | INFO     | utils.xiayi:set_window_pos:241 - 位置: (-6, 0)
+2025-04-12 12:06:19.593 | INFO     | utils.xiayi:set_window_pos:242 - 大小: 568 x 1033
+2025-04-12 12:06:19.593 | INFO     | utils.xiayi:set_window_pos:243 - 已设置为始终保持在最前端
+2025-04-12 12:06:20.594 | INFO     | utils.xiayi:append_nothing_to_txt:268 - 文本已追加到: progress/20250411.txt
+2025-04-12 12:06:20.594 | INFO     | utils.xiayi:read_txt:287 - 已读取文件最后一行: progress/20250411.txt
+2025-04-12 12:06:21.407 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (114, 700) -> (489, 869)
+2025-04-12 12:06:26.458 | INFO     | utils.xiayi:set_window_pos:240 - 已设置窗口 '墨迹大侠-波浪1' (句柄: 1052144):
+2025-04-12 12:06:26.458 | INFO     | utils.xiayi:set_window_pos:241 - 位置: (-6, 0)
+2025-04-12 12:06:26.458 | INFO     | utils.xiayi:set_window_pos:242 - 大小: 568 x 1033
+2025-04-12 12:06:26.458 | INFO     | utils.xiayi:set_window_pos:243 - 已设置为始终保持在最前端
+2025-04-12 12:06:27.459 | INFO     | utils.xiayi:append_nothing_to_txt:268 - 文本已追加到: progress/20250411.txt
+2025-04-12 12:06:27.460 | INFO     | utils.xiayi:read_txt:287 - 已读取文件最后一行: progress/20250411.txt
+2025-04-12 12:06:28.264 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (114, 700) -> (489, 869)
+2025-04-12 12:06:36.241 | INFO     | utils.xiayi:set_window_pos:240 - 已设置窗口 '墨迹大侠-波浪1' (句柄: 1052144):
+2025-04-12 12:06:36.241 | INFO     | utils.xiayi:set_window_pos:241 - 位置: (-6, 0)
+2025-04-12 12:06:36.241 | INFO     | utils.xiayi:set_window_pos:242 - 大小: 568 x 1033
+2025-04-12 12:06:36.242 | INFO     | utils.xiayi:set_window_pos:243 - 已设置为始终保持在最前端
+2025-04-12 12:06:37.242 | INFO     | utils.xiayi:append_nothing_to_txt:268 - 文本已追加到: progress/20250411.txt
+2025-04-12 12:06:37.242 | INFO     | utils.xiayi:read_txt:287 - 已读取文件最后一行: progress/20250411.txt
+2025-04-12 12:06:38.071 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (114, 700) -> (489, 869)
+2025-04-12 12:08:05.276 | INFO     | utils.xiayi:set_window_pos:240 - 已设置窗口 '墨迹大侠' (句柄: 396834):
+2025-04-12 12:08:05.276 | INFO     | utils.xiayi:set_window_pos:241 - 位置: (-6, 0)
+2025-04-12 12:08:05.276 | INFO     | utils.xiayi:set_window_pos:242 - 大小: 568 x 1033
+2025-04-12 12:08:05.276 | INFO     | utils.xiayi:set_window_pos:243 - 已设置为始终保持在最前端
+2025-04-12 12:08:06.277 | INFO     | utils.xiayi:append_nothing_to_txt:268 - 文本已追加到: progress/20250411.txt
+2025-04-12 12:08:06.277 | INFO     | utils.xiayi:read_txt:287 - 已读取文件最后一行: progress/20250411.txt
+2025-04-12 12:08:07.100 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (114, 700) -> (489, 869)
+2025-04-12 12:08:12.144 | INFO     | utils.xiayi:set_window_pos:240 - 已设置窗口 '墨迹大侠' (句柄: 396834):
+2025-04-12 12:08:12.144 | INFO     | utils.xiayi:set_window_pos:241 - 位置: (-6, 0)
+2025-04-12 12:08:12.145 | INFO     | utils.xiayi:set_window_pos:242 - 大小: 568 x 1033
+2025-04-12 12:08:12.145 | INFO     | utils.xiayi:set_window_pos:243 - 已设置为始终保持在最前端
+2025-04-12 12:08:13.146 | INFO     | utils.xiayi:append_nothing_to_txt:268 - 文本已追加到: progress/20250411.txt
+2025-04-12 12:08:13.147 | INFO     | utils.xiayi:read_txt:287 - 已读取文件最后一行: progress/20250411.txt
+2025-04-12 12:08:13.983 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (114, 700) -> (489, 869)
+2025-04-12 12:08:19.028 | INFO     | utils.xiayi:set_window_pos:240 - 已设置窗口 '墨迹大侠' (句柄: 396834):
+2025-04-12 12:08:19.028 | INFO     | utils.xiayi:set_window_pos:241 - 位置: (-6, 0)
+2025-04-12 12:08:19.028 | INFO     | utils.xiayi:set_window_pos:242 - 大小: 568 x 1033
+2025-04-12 12:08:19.028 | INFO     | utils.xiayi:set_window_pos:243 - 已设置为始终保持在最前端
+2025-04-12 12:08:20.029 | INFO     | utils.xiayi:append_nothing_to_txt:268 - 文本已追加到: progress/20250411.txt
+2025-04-12 12:08:20.029 | INFO     | utils.xiayi:read_txt:287 - 已读取文件最后一行: progress/20250411.txt
+2025-04-12 12:08:20.850 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (114, 700) -> (489, 869)
+2025-04-12 21:02:09.055 | INFO     | utils.xiayi:set_window_pos:242 - 已设置窗口 '墨迹大侠-波浪7' (句柄: 70926):
+2025-04-12 21:02:09.055 | INFO     | utils.xiayi:set_window_pos:243 - 位置: (-6, 0)
+2025-04-12 21:02:09.055 | INFO     | utils.xiayi:set_window_pos:244 - 大小: 568 x 1033
+2025-04-12 21:02:09.057 | INFO     | utils.xiayi:set_window_pos:245 - 已设置为始终保持在最前端
+2025-04-12 21:02:10.058 | INFO     | utils.xiayi:append_nothing_to_txt:270 - 文本已追加到: progress/20250411.txt
+2025-04-12 21:02:10.058 | INFO     | utils.xiayi:read_txt:289 - 已读取文件最后一行: progress/20250411.txt
+2025-04-12 21:02:10.890 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (114, 700) -> (489, 869)
+2025-04-12 21:02:10.964 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 21:04:17.483 | INFO     | utils.xiayi:set_window_pos:242 - 已设置窗口 '墨迹大侠-波浪7' (句柄: 70926):
+2025-04-12 21:04:17.484 | INFO     | utils.xiayi:set_window_pos:243 - 位置: (-6, 0)
+2025-04-12 21:04:17.484 | INFO     | utils.xiayi:set_window_pos:244 - 大小: 568 x 1033
+2025-04-12 21:04:17.484 | INFO     | utils.xiayi:set_window_pos:245 - 已设置为始终保持在最前端
+2025-04-12 21:04:18.486 | INFO     | utils.xiayi:append_nothing_to_txt:270 - 文本已追加到: progress/20250411.txt
+2025-04-12 21:04:18.487 | INFO     | utils.xiayi:read_txt:289 - 已读取文件最后一行: progress/20250411.txt
+2025-04-12 21:04:19.316 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (114, 700) -> (489, 869)
+2025-04-12 21:04:19.379 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 21:06:42.379 | INFO     | utils.xiayi:set_window_pos:242 - 已设置窗口 '墨迹大侠-波浪7' (句柄: 70926):
+2025-04-12 21:06:42.380 | INFO     | utils.xiayi:set_window_pos:243 - 位置: (-6, 0)
+2025-04-12 21:06:42.380 | INFO     | utils.xiayi:set_window_pos:244 - 大小: 568 x 1033
+2025-04-12 21:06:42.380 | INFO     | utils.xiayi:set_window_pos:245 - 已设置为始终保持在最前端
+2025-04-12 21:06:43.381 | INFO     | utils.xiayi:append_nothing_to_txt:270 - 文本已追加到: progress/20250411.txt
+2025-04-12 21:06:43.381 | INFO     | utils.xiayi:read_txt:289 - 已读取文件最后一行: progress/20250411.txt
+2025-04-12 21:06:44.209 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (114, 700) -> (489, 869)
+2025-04-12 21:06:44.259 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 21:06:45.883 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (114, 700) -> (489, 869)
+2025-04-12 21:06:45.914 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 21:08:37.795 | INFO     | utils.xiayi:set_window_pos:243 - 已设置窗口 '墨迹大侠-波浪7' (句柄: 70926):
+2025-04-12 21:08:37.795 | INFO     | utils.xiayi:set_window_pos:244 - 位置: (-6, 0)
+2025-04-12 21:08:37.795 | INFO     | utils.xiayi:set_window_pos:245 - 大小: 568 x 1033
+2025-04-12 21:08:37.795 | INFO     | utils.xiayi:set_window_pos:246 - 已设置为始终保持在最前端
+2025-04-12 21:08:38.795 | INFO     | utils.xiayi:append_nothing_to_txt:271 - 文本已追加到: progress/20250411.txt
+2025-04-12 21:08:38.795 | INFO     | utils.xiayi:read_txt:290 - 已读取文件最后一行: progress/20250411.txt
+2025-04-12 21:08:39.620 | INFO     | utils.xiayi:capture_window:103 - 截图区域: (114, 700) -> (489, 869)
+2025-04-12 21:08:39.674 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 21:08:41.353 | INFO     | utils.xiayi:capture_window:103 - 截图区域: (114, 700) -> (489, 869)
+2025-04-12 21:08:41.396 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 21:09:41.093 | INFO     | utils.xiayi:set_window_pos:243 - 已设置窗口 '墨迹大侠-波浪7' (句柄: 70926):
+2025-04-12 21:09:41.093 | INFO     | utils.xiayi:set_window_pos:244 - 位置: (-6, 0)
+2025-04-12 21:09:41.095 | INFO     | utils.xiayi:set_window_pos:245 - 大小: 568 x 1033
+2025-04-12 21:09:41.095 | INFO     | utils.xiayi:set_window_pos:246 - 已设置为始终保持在最前端
+2025-04-12 21:09:42.095 | INFO     | utils.xiayi:append_nothing_to_txt:271 - 文本已追加到: progress/20250411.txt
+2025-04-12 21:09:42.095 | INFO     | utils.xiayi:read_txt:290 - 已读取文件最后一行: progress/20250411.txt
+2025-04-12 21:09:42.918 | INFO     | utils.xiayi:capture_window:103 - 截图区域: (114, 700) -> (489, 869)
+2025-04-12 21:09:42.974 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 21:09:44.592 | INFO     | utils.xiayi:capture_window:103 - 截图区域: (114, 700) -> (489, 869)
+2025-04-12 21:09:44.633 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 21:10:32.352 | INFO     | utils.xiayi:set_window_pos:243 - 已设置窗口 '墨迹大侠-波浪7' (句柄: 70926):
+2025-04-12 21:10:32.352 | INFO     | utils.xiayi:set_window_pos:244 - 位置: (-6, 0)
+2025-04-12 21:10:32.352 | INFO     | utils.xiayi:set_window_pos:245 - 大小: 568 x 1033
+2025-04-12 21:10:32.352 | INFO     | utils.xiayi:set_window_pos:246 - 已设置为始终保持在最前端
+2025-04-12 21:10:33.353 | INFO     | utils.xiayi:append_nothing_to_txt:271 - 文本已追加到: progress/20250411.txt
+2025-04-12 21:10:33.353 | INFO     | utils.xiayi:read_txt:290 - 已读取文件最后一行: progress/20250411.txt
+2025-04-12 21:10:34.181 | INFO     | utils.xiayi:capture_window:103 - 截图区域: (114, 700) -> (489, 869)
+2025-04-12 21:10:34.235 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 21:10:35.828 | INFO     | utils.xiayi:capture_window:103 - 截图区域: (114, 700) -> (489, 869)
+2025-04-12 21:10:35.857 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 21:11:08.586 | INFO     | utils.xiayi:set_window_pos:243 - 已设置窗口 '墨迹大侠-波浪7' (句柄: 70926):
+2025-04-12 21:11:08.586 | INFO     | utils.xiayi:set_window_pos:244 - 位置: (-6, 0)
+2025-04-12 21:11:08.586 | INFO     | utils.xiayi:set_window_pos:245 - 大小: 568 x 1033
+2025-04-12 21:11:08.586 | INFO     | utils.xiayi:set_window_pos:246 - 已设置为始终保持在最前端
+2025-04-12 21:11:09.586 | INFO     | utils.xiayi:append_nothing_to_txt:271 - 文本已追加到: progress/20250411.txt
+2025-04-12 21:11:09.586 | INFO     | utils.xiayi:read_txt:290 - 已读取文件最后一行: progress/20250411.txt
+2025-04-12 21:11:10.413 | INFO     | utils.xiayi:capture_window:103 - 截图区域: (114, 700) -> (489, 869)
+2025-04-12 21:11:10.462 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 21:11:12.052 | INFO     | utils.xiayi:capture_window:103 - 截图区域: (114, 700) -> (489, 869)
+2025-04-12 21:11:12.098 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 21:11:14.480 | INFO     | utils.xiayi:capture_window:103 - 截图区域: (114, 700) -> (489, 869)
+2025-04-12 21:11:14.521 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 21:11:15.769 | INFO     | utils.xiayi:capture_window:103 - 截图区域: (114, 700) -> (489, 869)
+2025-04-12 21:11:15.814 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 21:11:18.145 | INFO     | utils.xiayi:capture_window:103 - 截图区域: (114, 700) -> (489, 869)
+2025-04-12 21:11:18.187 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 21:11:19.404 | INFO     | utils.xiayi:capture_window:103 - 截图区域: (114, 700) -> (489, 869)
+2025-04-12 21:11:19.437 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png

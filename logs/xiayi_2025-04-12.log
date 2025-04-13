@@ -1,0 +1,427 @@
+2025-04-12 11:40:54.758 | INFO     | __main__:append_nothing_to_txt:259 - 文本已追加到: progress/20250411.txt
+2025-04-12 17:04:59.662 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (884, 33) -> (1423, 1018)
+2025-04-12 17:06:59.740 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (884, 33) -> (1423, 1018)
+2025-04-12 17:12:47.695 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (884, 33) -> (1423, 1018)
+2025-04-12 17:24:08.862 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 17:24:46.431 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 17:25:35.106 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 17:25:35.148 | INFO     | utils.xiayi:capture_and_recognize_text:310 - 已保存截图到 imgs/capture.png
+2025-04-12 17:26:48.747 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 17:27:33.045 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 17:28:14.766 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 17:28:46.780 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 17:28:46.822 | INFO     | utils.xiayi:capture_and_recognize_text:313 - 已保存截图到 imgs/capture.png
+2025-04-12 17:31:37.678 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 17:31:37.722 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 17:32:02.929 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 17:32:03.106 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 17:39:13.332 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 17:39:13.395 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 17:39:38.076 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 17:39:38.146 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 17:39:59.141 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 17:39:59.213 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 17:40:40.423 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 17:40:40.492 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 17:43:58.402 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 17:43:58.466 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 17:45:01.503 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 17:45:01.572 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 17:45:41.467 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 17:45:41.545 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 17:46:09.180 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 17:46:09.235 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 17:46:46.339 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 17:46:46.407 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 17:48:36.767 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 17:48:36.835 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 17:49:29.146 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 17:49:29.216 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 17:52:33.027 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 17:52:33.065 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 17:54:02.110 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 17:54:02.163 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 17:54:10.068 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 17:54:10.152 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 17:57:06.941 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 17:57:07.010 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:07:28.817 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:07:28.899 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:07:34.454 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:07:34.528 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:07:42.092 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:07:42.177 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:07:46.803 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:07:46.873 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:08:34.322 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:08:34.392 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:08:39.700 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:08:39.769 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:10:37.433 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:10:37.505 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:10:41.994 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:10:42.061 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:11:46.868 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:11:46.931 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:11:51.391 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:11:51.461 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:12:37.913 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:12:37.996 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:12:42.488 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:12:42.555 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:14:52.663 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:14:52.739 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:14:58.098 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:14:58.162 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:15:04.866 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:15:04.939 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:15:09.397 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:15:09.467 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:15:45.803 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:15:45.870 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:15:50.528 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:15:50.598 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:16:52.686 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:16:52.750 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:16:57.342 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:16:57.412 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:17:03.126 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:17:03.195 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:17:08.843 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:17:08.910 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:17:13.224 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:17:13.292 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:17:19.074 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:17:19.144 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:17:23.461 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:17:23.528 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:19:35.923 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:19:35.993 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:19:40.584 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:19:40.651 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:19:47.219 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:19:47.288 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:19:53.537 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:19:53.602 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:20:00.149 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:20:00.221 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:20:06.853 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:20:06.918 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:20:13.586 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:20:13.653 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:20:20.170 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:20:20.236 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:20:26.873 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:20:26.935 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:22:36.912 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:22:36.984 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:22:41.575 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:22:41.642 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:22:47.643 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:22:47.709 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:22:54.177 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:22:54.244 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:23:00.694 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:23:00.761 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:23:07.277 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:23:07.342 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:23:13.764 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:23:13.827 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:23:20.041 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:23:20.109 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:23:26.362 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:23:26.428 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:23:32.691 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:23:32.760 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:23:38.875 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:23:38.946 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:23:45.800 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:23:45.859 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:23:52.207 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:23:52.276 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:23:58.515 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:23:58.575 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:24:04.941 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:24:05.008 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:24:11.842 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:24:11.907 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:24:18.706 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:24:18.773 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:24:25.591 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:24:25.654 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:24:32.438 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:24:32.508 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:24:39.039 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:24:39.107 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:24:45.472 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:24:45.542 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:25:10.421 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:25:10.494 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:25:12.400 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:25:12.483 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:25:29.327 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:25:29.391 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:25:31.916 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:25:31.984 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:25:36.570 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:25:36.636 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:25:46.772 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:25:46.841 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:25:50.332 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:25:50.400 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:25:55.983 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:25:56.053 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:26:52.493 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:26:52.571 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:26:56.113 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:26:56.183 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:27:01.747 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:27:01.816 | INFO     | utils.xiayi:capture_and_recognize_text:312 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:27:17.634 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:27:17.704 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:27:22.277 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:27:22.346 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:27:28.947 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:27:29.014 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:27:35.381 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:27:35.444 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:27:41.994 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:27:42.063 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:27:48.892 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:27:48.963 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:27:55.466 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:27:55.528 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:28:02.075 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:28:02.145 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:28:08.657 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:28:08.729 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:28:15.279 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:28:15.345 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:28:21.844 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:28:21.910 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:28:28.443 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:28:28.511 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:28:35.127 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:28:35.192 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:28:41.445 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:28:41.510 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:28:47.676 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:28:47.742 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:28:54.043 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:28:54.109 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:29:00.693 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:29:00.759 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:29:07.145 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:29:07.211 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:29:13.507 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:29:13.575 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:29:20.057 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:29:20.124 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:29:26.386 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:29:26.455 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:29:33.341 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:29:33.408 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:29:39.768 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:29:39.840 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:29:46.292 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:29:46.356 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:29:52.774 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:29:52.838 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:29:59.557 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:29:59.623 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:30:06.214 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:30:06.270 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:30:12.502 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:30:12.571 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:30:19.085 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:30:19.152 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:30:25.638 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:30:25.704 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:30:32.037 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:30:32.103 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:30:38.555 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:30:38.620 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:30:45.253 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:30:45.319 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:30:51.621 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:30:51.689 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:30:58.335 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:30:58.402 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:31:04.939 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:31:05.002 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:31:11.336 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:31:11.402 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:31:17.834 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:31:17.902 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:31:24.685 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:31:24.750 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:31:31.218 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:31:31.283 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:31:37.618 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:31:37.683 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:31:44.002 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:31:44.066 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:31:50.868 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:31:50.933 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:31:57.413 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:31:57.482 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:32:04.108 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:32:04.166 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:32:11.116 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:32:11.181 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:32:18.199 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:32:18.264 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:32:24.881 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:32:24.954 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:32:31.599 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:32:31.662 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:32:38.246 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:32:38.300 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:32:44.765 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:32:44.831 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:32:51.198 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:32:51.261 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:32:57.794 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:32:57.865 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:33:04.254 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:33:04.312 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:33:11.213 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:33:11.278 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:33:17.662 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:33:17.728 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:33:24.012 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:33:24.080 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:33:30.780 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:33:30.845 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:33:37.825 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:33:37.895 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:33:44.396 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:33:44.459 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:33:51.211 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:33:51.277 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:33:57.925 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:33:57.995 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:34:04.396 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:34:04.489 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:34:11.277 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:34:11.343 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:34:17.777 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:34:17.845 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:34:24.777 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:34:24.843 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:34:31.626 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:34:31.694 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:34:38.077 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:34:38.143 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:34:44.692 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:34:44.760 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:34:50.808 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:34:50.873 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:34:57.257 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:34:57.323 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:35:04.107 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:35:04.176 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:35:10.723 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:35:10.791 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:35:17.057 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:35:17.123 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:35:23.605 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:35:23.676 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:35:30.005 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:35:30.081 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:35:36.462 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:35:36.524 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:35:42.988 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:35:43.055 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:35:49.870 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:35:49.945 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:35:56.555 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:35:56.624 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:36:03.154 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:36:03.220 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:36:09.538 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:36:09.605 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:36:16.170 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:36:16.238 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:36:22.866 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:36:22.938 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:36:29.621 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:36:29.688 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:36:36.464 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:36:36.536 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:36:43.184 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:36:43.253 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:36:50.202 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:36:50.268 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:36:57.251 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:36:57.320 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:37:04.052 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:37:04.117 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:37:10.800 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:37:10.866 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:37:17.767 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:37:17.833 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:37:24.834 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:37:24.902 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:37:32.184 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:37:32.248 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:37:39.153 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:37:39.217 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:37:45.949 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:37:46.016 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:37:52.483 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:37:52.550 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:37:59.150 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:37:59.213 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:38:06.171 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:38:06.233 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:38:12.845 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:38:12.915 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:38:19.312 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:38:19.380 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:38:25.897 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:38:25.965 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:38:32.497 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:38:32.562 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:39:31.085 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:39:31.150 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:39:36.707 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:39:36.778 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:39:44.393 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:39:44.458 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:40:12.696 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:40:12.764 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:40:18.222 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:40:18.291 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:40:26.308 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:40:26.373 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:40:38.712 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:40:38.780 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:40:44.054 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:40:44.122 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:40:52.389 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:40:52.456 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:41:00.838 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:41:00.904 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:41:08.621 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:41:08.688 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:41:16.620 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:41:16.691 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:41:24.722 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:41:24.789 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:41:32.856 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:41:32.920 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:41:41.139 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:41:41.214 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:41:49.917 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:41:49.988 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:41:58.146 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:41:58.201 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:42:06.470 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:42:06.535 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:42:14.287 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:42:14.351 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 18:42:22.170 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (10, 10) -> (549, 995)
+2025-04-12 18:42:22.234 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png
+2025-04-12 19:13:43.157 | INFO     | utils.xiayi:capture_window:102 - 截图区域: (20, 0) -> (602, 1032)
+2025-04-12 19:13:43.235 | INFO     | utils.xiayi:capture_and_recognize_text:311 - 已保存截图到 F:\project\brushChivalry/imgs/capture.png

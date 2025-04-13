@@ -29,8 +29,9 @@ API_KEY = 'g0B8vbOJtFSAgGYuFDbAWGtN'
 SECRET_KEY = 'v5PuD7xxFKJFoNIavBGVvnLeopp9InU4'
 
 XIAYI_DICT1 = {'杏花村': 1, '丐帮': 2, '峨嵋派': 3, '齐云山': 4, '武当山': 5}
-XIAYI_DICT2 = {1: {'杏花村', '桃花谷'}, 2: {'丐帮'}, 3: '峨眉派', 4: {'齐云山', '华山派'}, 5: {'武当山', '武当派'}}
-NAMES = ('5米每月刷侠义', '侠义领导者', '波浪1')
+XIAYI_DICT2 = {1: {'杏花村', '桃花谷'}, 2: {'丐帮', '正帮'}, 3: {'峨眉派','心素派'}, 4: {'齐云山', '华山派'},
+               5: {'武当山', '武当派'}}
+NAMES = ('5米每月刷侠义', '侠义领导者', '波浪')
 
 ocr = PaddleOCR(use_angle_cls=True, lang="ch")  # need to run only once to download and load model into memory
 
@@ -43,6 +44,8 @@ script_directory = Path(__file__).resolve().parent
 # 向上查找，直到找到项目根目录
 # project_root = script_directory.parent
 project_root = os.path.join(os.path.expanduser('~'), 'xiayi')
+
+
 # print(f"项目根目录: {project_root}")
 
 
@@ -67,7 +70,7 @@ def judge_end_and_exit(hwnd):
         text = capture_and_recognize_text(0, 0, 0, 0, hwnd)
         text = str(text)
         logger.info(text)
-        if text.find('恭喜通关') > -1:
+        if text.find('结算奖励') > -1:
             now = time.strftime("%Y%m%d%H%M%S", time.localtime())
             logger.info(now)
             img = capture_window(0, 0, 0, 0, hwnd)
@@ -79,7 +82,7 @@ def judge_end_and_exit(hwnd):
                 img.save(path)
                 logger.info("已保存截图到 " + file_name)
             else:
-                logger.info("恭喜通关截图失败!")
+                logger.info("结算奖励截图失败!")
             break
         time.sleep(1)
     # 点击退出，继续在系统界面等待
@@ -384,7 +387,14 @@ def main():
     # print (os.path.expandvars('$HOME'))
     # print (os.path.expanduser('~'))
     # project_root = os.path.join(os.path.expanduser('~'), 'xiayi')
-    print(os.path.join(os.path.expanduser('~'), 'xiayi'))
+    path = os.path.join(str(project_root), 'imgs', 'capture.png')
+    # path = str(project_root) + "/imgs/capture.png"
+    # img.save(path)
+    # logger.info("已保存截图到 {}", path)
+    # 识别文字
+    text = recognize_text_paddleocr(path)
+    pprint(text)
+
 
 if __name__ == "__main__":
     main()

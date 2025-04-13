@@ -1,0 +1,31 @@
+Traceback (most recent call last):
+  File "dahao_controller.py", line 6, in <module>
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "PyInstaller\loader\pyimod02_importers.py", line 450, in exec_module
+  File "dahao.py", line 6, in <module>
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "PyInstaller\loader\pyimod02_importers.py", line 450, in exec_module
+  File "utils\xiayi.py", line 32, in <module>
+  File "paddleocr\paddleocr.py", line 675, in __init__
+    maybe_download(params.det_model_dir, det_url)
+  File "paddleocr\ppocr\utils\network.py", line 116, in maybe_download
+    download_with_progressbar(url, tmp_path)
+  File "paddleocr\ppocr\utils\network.py", line 43, in download_with_progressbar
+    _download(url, save_path)
+  File "paddleocr\ppocr\utils\network.py", line 93, in _download
+    with tqdm(total=(int(total_size) + 1023) // 1024) as pbar:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "tqdm\std.py", line 1098, in __init__
+  File "tqdm\std.py", line 1347, in refresh
+  File "tqdm\std.py", line 1495, in display
+  File "tqdm\std.py", line 459, in print_status
+  File "tqdm\std.py", line 452, in fp_write
+  File "tqdm\utils.py", line 140, in __getattr__
+AttributeError: 'NoneType' object has no attribute 'write'
+
+
+ pyinstaller --noconfirm --onefile --windowed  --hidden-import "imghdr" --hidden-import "imgaug" --hidden-import "pyclipper" --collect-data "paddle" --collect-data "scipy" --collect-all "paddleocr" --collect-all "lmdb" --hidden-import "tqdm"  "F:\project\brushChivalry\dahao_controller.py"             
