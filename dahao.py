@@ -63,7 +63,7 @@ def go_system_window_and_wait(hwnd):
                     '点击加入') > -1 and xiayi.xiayi_list_contain_judge(xiayi.NAMES, text) == True:
                 flag = chuli(text, level, count, txt_file, hwnd)
             else:
-                xiayi.drag(50, 200, 50, 500, hwnd)
+                xiayi.drag(516, 843, 516, 643, hwnd)
                 # 截图并文字识别出当前邀请是否是自己需要的资源
                 text = xiayi.capture_and_recognize_text(120, 700, 495, 869, hwnd)
                 text = str(text)
@@ -97,7 +97,8 @@ def chuli(text, level, count, txt_file, hwnd):
         # 点击随机技能
         xiayi.click_at(43, 265, hwnd)
         # 先等6分钟
-        time.sleep(6 * 60 - 30)
+        logger.info('休眠360s')
+        time.sleep(360)
 
         # 判断结束，每隔一秒循环截图
         xiayi.judge_end_and_exit(hwnd)

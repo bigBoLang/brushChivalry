@@ -1,3 +1,4 @@
+import ctypes
 import os
 import random
 import time
@@ -30,7 +31,7 @@ API_KEY = 'g0B8vbOJtFSAgGYuFDbAWGtN'
 SECRET_KEY = 'v5PuD7xxFKJFoNIavBGVvnLeopp9InU4'
 
 XIAYI_DICT1 = {'杏花村': 1, '丐帮': 2, '峨嵋派': 3, '齐云山': 4, '武当山': 5}
-XIAYI_DICT2 = {1: {'杏花村', '桃花谷'}, 2: {'丐帮', '正帮'}, 3: {'峨眉派','心素派'}, 4: {'齐云山', '华山派'},
+XIAYI_DICT2 = {1: {'杏花村', '桃花谷'}, 2: {'丐帮', '正帮'}, 3: {'峨眉派', '心素派'}, 4: {'齐云山', '华山派'},
                5: {'武当山', '武当派'}}
 NAMES = ('5米每月刷侠义', '侠义领导者', '波浪')
 
@@ -85,7 +86,7 @@ def judge_end_and_exit(hwnd):
             else:
                 logger.info("结算奖励截图失败!")
             break
-        time.sleep(1)
+        time.sleep(5)
     # 点击退出，继续在系统界面等待
     click_at(273, 998, hwnd)
 
@@ -148,7 +149,7 @@ def recognize_text_paddleocr(image_path, loc=False):
     # ocr = PaddleOCR()  # 初始化OCR
     result = ocr.ocr(image_path, cls=True)
     if result is None or str(result) == '[None]' or len(result) == 0 or loc:
-        pprint('直接返回')
+        # pprint('直接返回')
         return result
     pprint('------------')
     pprint(result)
@@ -186,7 +187,10 @@ def click_at(x, y, hwnd, double_click=False):
     y = window_top + y
 
     """在指定坐标执行点击"""
-    win32api.SetCursorPos((x, y))
+    # 激活窗口
+    # win32gui.ShowWindow(hwnd, win32con.SW_RESTORE)  # 恢复窗口
+    # win32api.SetCursorPos((x, y))
+    ctypes.windll.user32.SetCursorPos(x, y)
     time.sleep(0.1)  # 等待鼠标移动到位
 
     # 执行点击
@@ -213,9 +217,9 @@ def click_at(x, y, hwnd, double_click=False):
 
 
 def drag(start_x, start_y, end_x, end_y, hwnd, duration=0.5):
-    window_left, window_top, window_right, window_bottom = win32gui.GetWindowRect(hwnd)
-    start_x, start_y = window_right - start_x, window_bottom - start_y
-    end_x, end_y = window_right - end_x, window_bottom - end_y
+    # window_left, window_top, window_right, window_bottom = win32gui.GetWindowRect(hwnd)
+    # start_x, start_y = window_right - start_x, window_bottom - start_y
+    # end_x, end_y = window_right - end_x, window_bottom - end_y
 
     """执行拖动操作"""
     # 移动到起始位置
@@ -254,9 +258,15 @@ def set_window_pos(hwnd, x, y, width, height):
                 time.sleep(0.1)  # 给窗口一些恢复的时间
 
             # 设置窗口位置和大小，并保持在最前端 (HWND_TOPMOST)
-            win32gui.SetWindowPos(hwnd, win32con.HWND_TOPMOST, x, y, width, height,
-                                  win32con.SWP_SHOWWINDOW)
-
+            # win32gui.SetWindowPos(hwnd, win32con.HWND_TOPMOST, x, y, width, height,
+            #                       win32con.SWP_SHOWWINDOW)
+            # 获取当前窗口的位置
+            rect = win32gui.GetWindowRect(hwnd)  # 返回 (left, top, right, bottom)
+            left = rect[0]
+            top = rect[1]
+            win32gui.SetForegroundWindow(hwnd)
+            # 设置窗口大小，保持位置不变
+            win32gui.SetWindowPos(hwnd, None, left, top, width, height, win32con.SWP_NOZORDER | win32con.SWP_NOACTIVATE)
             # 设置窗口扩展样式，使其始终保持在最前端
             # style = win32gui.GetWindowLong(hwnd, win32con.GWL_EXSTYLE)
             # win32gui.SetWindowLong(hwnd, win32con.GWL_EXSTYLE, style | win32con.WS_EX_TOPMOST)
@@ -329,7 +339,7 @@ def read_txt(filename, last_line_only=False):
         return None
 
 
-def capture_and_recognize_text(x1, y1, x2, y2, hwnd, loc=False):
+def capture_and_recognize_text(x1, y1, x2, y2, hwnd, loc=False, baidu=False):
     # 捕获窗口的截图
     img = capture_window(x1, y1, x2, y2, hwnd)
     text = ''
@@ -341,7 +351,10 @@ def capture_and_recognize_text(x1, y1, x2, y2, hwnd, loc=False):
         img.save(path)
         logger.info("已保存截图到 {}", path)
         # 识别文字
-        text = recognize_text_paddleocr(path, loc)
+        if baidu:
+            text = recognize_text_baidu(path)
+        else:
+            text = recognize_text_paddleocr(path, loc)
         return text
 
 
@@ -389,6 +402,7 @@ def get_random_point(corners):
 
     return random_x, random_y
 
+
 def ensure_directory_exists(sub_dir, parent_dir=project_root):
     # 构建完整的子目录路径
     full_path = os.path.join(parent_dir, sub_dir)
@@ -401,9 +415,10 @@ def ensure_directory_exists(sub_dir, parent_dir=project_root):
     else:
         print(f"目录已存在: {full_path}")
 
-def init():
+
+def init(prefix='墨迹大侠'):
     # 找到目标窗口
-    hwnd = get_window_by_title_prefix("墨迹大侠")
+    hwnd = get_window_by_title_prefix(prefix)
 
     if not hwnd:
         logger.info("未找到墨迹大侠窗口")
@@ -416,6 +431,7 @@ def init():
     set_window_pos(hwnd, -6, 0, 568, 1033)
     time.sleep(1)
     return hwnd
+
 
 def main():
     # image_path = 'capture.png'  # 确保这个路径是正确的

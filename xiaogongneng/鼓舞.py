@@ -15,14 +15,16 @@ def main():
     hwnd = xiayi.get_window_by_title_prefix("墨迹大侠")
     text = xiayi.capture_and_recognize_text(0, 0, 0, 0, hwnd, True)
     pprint(text)
+    start = time.time()
     while True:
         # 1.点击锻铸
         key = '鼓舞'
         xiayi.recognize_and_click(text, hwnd, key)
-        time.sleep(0.1)
-
-
-
+        time.sleep(1)
+        end = time.time()
+        cost = end - start
+        if cost >= 600:
+            break
 
 
 if __name__ == "__main__":

@@ -17,6 +17,8 @@ def get_windows_by_title_prefix(prefix):
 
 def click_at(x, y, double_click=False):
     """在指定坐标执行点击"""
+    # 激活窗口
+    win32gui.ShowWindow(hwnd, win32con.SW_RESTORE)  # 恢复窗口
     win32api.SetCursorPos((x, y))
     time.sleep(0.1)  # 等待鼠标移动到位
     

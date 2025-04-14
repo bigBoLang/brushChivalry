@@ -4,6 +4,9 @@ import time
 from pprint import pprint
 import random
 
+import win32api
+import win32gui
+
 from utils.xiayi import click_at
 
 # 将项目根目录添加到 sys.path
@@ -34,7 +37,18 @@ def main():
         print('point1:{}', point1)
         index = result.find('评分', index + 1)
         if index == -1:
-            xiayi.click_at(260, 512, hwnd)
+            # xiayi.click_at(260, 512, hwnd)
+            # window_left, window_top, window_right, window_bottom = win32gui.GetWindowRect(hwnd)
+            # x = window_left + 271
+            # y = window_top + 621
+            text = xiayi.capture_and_recognize_text(0, 0, 0, 0, hwnd, True)
+            key = '装备'
+            xiayi.recognize_and_click(text, hwnd, key)
+            """在指定坐标执行点击"""
+            # win32api.SetCursorPos((x, y))
+            # xiayi.click_at(271, 621, hwnd)
+            time.sleep(1)
+            continue
         point2 = int(result[index + 3:index + 4])
         print('index:{}', index)
         print('point2:{}', point2)
