@@ -1,0 +1,16 @@
+{
+    "programs": [
+        {
+            "name": "MuMu模拟器",
+            "path": "D:\\software\\MuMu Player 12\\shell\\MuMuPlayer.exe",
+            "args": ["-p", "com.xkmwx.szhy.game", "-v", "1"],
+            "search_title": "MuMu"
+        },
+        {
+            "name": "墨迹大侠",
+            "path": "D:\\software\\WeChat\\WechatAppLauncher.exe",
+            "args": ["-launch_appid=wx590db9678033668a"],
+            "search_title": "墨迹大侠"
+        }
+    ]
+}
