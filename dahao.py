@@ -5,6 +5,7 @@ import datetime
 
 import win32gui
 from loguru import logger
+from sympy import pprint
 
 from utils import xiayi
 
@@ -117,6 +118,7 @@ def chuli(text, level, count, txt_file, hwnd):
 def goto_system_window(hwnd):
     # 先定位到系统界面
     logger.info('跳转到系统界面!!!!')
+    time.sleep(1)
     xiayi.click_at(392, 908, hwnd)
     xiayi.click_at(475, 226, hwnd)
 
@@ -138,27 +140,18 @@ def pause():
 
 
 def main():
-    while not stop_event.is_set():  # 检查是否设置了停止事件
-        if pause_event.is_set():  # 检查是否设置了暂停事件
-            time.sleep(1)  # 暂停时等待
-            continue
+    # 初始化
+    hwnds = xiayi.init('墨迹大侠', False)
+    if not hwnds:
+        return False
 
-        # 执行任务的逻辑
-
-        hwnd = xiayi.init()
-        if not hwnd:
-            return False
-
-        time.sleep(2)
-        # # 在系统邀请界面等待
+    result = xiayi.recognize_dahao(hwnds)
+    logger.info('识别结果句柄：{}', result)
+    for hwnd in result:
+        # 在系统邀请界面等待
         go_system_window_and_wait(hwnd)
-        # while True:
-        #     print(123)
-        #     time.sleep(1)
-        # return True  # 执行成功返回True
-
-        # time.sleep(2)  # 模拟任务执行时间
 
 
 if __name__ == "__main__":
+    # xiayi.get_window_by_title_prefix('墨迹大侠')
     main()

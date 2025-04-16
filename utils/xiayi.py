@@ -9,10 +9,12 @@ from types import NoneType
 import win32api
 import win32con
 import win32gui
-from PIL import ImageGrab
+import win32ui
+from PIL import ImageGrab, Image
 from aip import AipOcr
 from loguru import logger
 from paddleocr import PaddleOCR
+import win32process
 
 # 切换文件继续记录
 logger.add('../logs/xiayi_{time:YYYY-MM-DD}.log', rotation="200 MB")  # 每个文件200M
@@ -51,7 +53,7 @@ project_root = os.path.join(os.path.expanduser('~'), 'xiayi')
 # print(f"项目根目录: {project_root}")
 
 
-def get_window_by_title_prefix(prefix):
+def get_window_by_title_prefix(prefix, single=True):
     """获取指定标题前缀的窗口句柄"""
     result = []
 
@@ -62,6 +64,8 @@ def get_window_by_title_prefix(prefix):
                 windows.append(hwnd)
 
     win32gui.EnumWindows(callback, result)
+    if not single:
+        return result
     return result[0] if result else None
 
 
@@ -91,7 +95,7 @@ def judge_end_and_exit(hwnd):
     click_at(273, 998, hwnd)
 
 
-def capture_window(x1, y1, x2, y2, hwnd):
+def capture_window_old(x1, y1, x2, y2, hwnd):
     """捕获窗口指定区域的截图"""
     try:
         # 获取窗口位置
@@ -117,6 +121,75 @@ def capture_window(x1, y1, x2, y2, hwnd):
 
     except Exception as e:
         logger.info(f"截图时出错: {str(e)}")
+        return None
+
+
+def capture_window(x1, y1, x2, y2, hwnd):
+    """
+    捕获指定标题窗口的内容或指定区域
+    """
+    try:
+        # 获取窗口位置和大小
+        left, top, right, bottom = win32gui.GetWindowRect(hwnd)
+        window_width = right - left
+        window_height = bottom - top
+
+        # 如果传入的坐标都是0，则截取整个窗口
+        if x1 == 0 and y1 == 0 and x2 == 0 and y2 == 0:
+            x1, y1 = 0, 0
+            x2, y2 = window_width, window_height
+        else:
+            # 确保坐标顺序正确（左上角的坐标小于右下角的坐标）
+            x1, x2 = min(x1, x2), max(x1, x2)
+            y1, y2 = min(y1, y2), max(y1, y2)
+
+            # 确保区域不超出窗口范围
+            if (x1 < 0 or y1 < 0 or
+                    x2 > window_width or y2 > window_height):
+                raise ValueError("指定的区域超出窗口范围")
+
+        # print(f"窗口位置: ({left}, {top}), 大小: {window_width}x{window_height}")
+
+        # 创建设备上下文
+        hwnd_dc = win32gui.GetWindowDC(hwnd)
+        mfc_dc = win32ui.CreateDCFromHandle(hwnd_dc)
+        save_dc = mfc_dc.CreateCompatibleDC()
+
+        # 创建位图
+        save_bitmap = win32ui.CreateBitmap()
+        save_bitmap.CreateCompatibleBitmap(mfc_dc, window_width, window_height)
+        save_dc.SelectObject(save_bitmap)
+
+        # 使用 PrintWindow 捕获窗口内容
+        result = ctypes.windll.user32.PrintWindow(hwnd, save_dc.GetSafeHdc(), 2)
+        if result == 0:
+            raise Exception("PrintWindow failed")
+
+        # 获取位图信息
+        bmpinfo = save_bitmap.GetInfo()
+        bmpstr = save_bitmap.GetBitmapBits(True)
+
+        # 转换为PIL图像
+        img = Image.frombuffer(
+            'RGB',
+            (bmpinfo['bmWidth'], bmpinfo['bmHeight']),
+            bmpstr, 'raw', 'BGRX', 0, 1
+        )
+
+        # 如果指定了区域，裁剪图像
+        if x1 != 0 or y1 != 0 or x2 != window_width or y2 != window_height:
+            img = img.crop((x1, y1, x2, y2))
+
+        # 清理资源
+        win32gui.DeleteObject(save_bitmap.GetHandle())
+        save_dc.DeleteDC()
+        mfc_dc.DeleteDC()
+        win32gui.ReleaseDC(hwnd, hwnd_dc)
+
+        return img
+
+    except Exception as e:
+        print(f"捕获窗口内容时出错: {e}")
         return None
 
 
@@ -151,14 +224,14 @@ def recognize_text_paddleocr(image_path, loc=False):
     if result is None or str(result) == '[None]' or len(result) == 0 or loc:
         # pprint('直接返回')
         return result
-    pprint('------------')
-    pprint(result)
-    pprint('------------')
-    pprint(str(result))
-    pprint(type(result))
-    pprint(type(result) == NoneType)
-    pprint(result is [None])
-    pprint(str(result) == '[None]')
+    # pprint('------------')
+    # pprint(result)
+    # pprint('------------')
+    # pprint(str(result))
+    # pprint(type(result))
+    # pprint(type(result) == NoneType)
+    # pprint(result is [None])
+    # pprint(str(result) == '[None]')
     # 提取识别到的文本
     extracted_texts = []
     for line in result:
@@ -181,70 +254,208 @@ def xiayi_list_contain_judge(data_list, text):
     return False
 
 
+# def click_at_old(x, y, hwnd, double_click=False):
+#     window_left, window_top, window_right, window_bottom = win32gui.GetWindowRect(hwnd)
+#     x = window_left + x
+#     y = window_top + y
+#
+#     """在指定坐标执行点击"""
+#     # 激活窗口
+#     # win32gui.ShowWindow(hwnd, win32con.SW_RESTORE)  # 恢复窗口
+#     # win32api.SetCursorPos((x, y))
+#     ctypes.windll.user32.SetCursorPos(x, y)
+#     time.sleep(0.1)  # 等待鼠标移动到位
+#
+#     # 执行点击
+#     win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0)
+#     time.sleep(0.1)
+#     win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP, 0, 0, 0, 0)
+#
+#     # 如果是双击，执行第二次点击
+#     if double_click:
+#         time.sleep(0.1)
+#         win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0)
+#         time.sleep(0.1)
+#         win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP, 0, 0, 0, 0)
+#
+#     time.sleep(0.2)
+# 单击
+# click_at(x, y)
+
+# 双击
+# click_at(x, y, double_click=True)
+
+# 拖动
+# drag(start_x, start_y, end_x, end_y, duration=0.5)
+
+
 def click_at(x, y, hwnd, double_click=False):
-    window_left, window_top, window_right, window_bottom = win32gui.GetWindowRect(hwnd)
-    x = window_left + x
-    y = window_top + y
+    """
+    专门处理 MuMu 模拟器的点击
+    """
+    try:
+        # 获取窗口信息
+        class_name = win32gui.GetClassName(hwnd)
+        window_title = win32gui.GetWindowText(hwnd)
 
-    """在指定坐标执行点击"""
-    # 激活窗口
-    # win32gui.ShowWindow(hwnd, win32con.SW_RESTORE)  # 恢复窗口
-    # win32api.SetCursorPos((x, y))
-    ctypes.windll.user32.SetCursorPos(x, y)
-    time.sleep(0.1)  # 等待鼠标移动到位
+        print(f"Debug - 窗口类名: {class_name}")
+        print(f"Debug - 窗口标题: {window_title}")
 
-    # 执行点击
-    win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0)
-    time.sleep(0.1)
-    win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP, 0, 0, 0, 0)
+        if "Qt" in class_name:  # MuMu模拟器窗口
+            # 查找所有子窗口
+            child_windows = []
+            win32gui.EnumChildWindows(hwnd, lambda hwnd, param: param.append(hwnd), child_windows)
 
-    # 如果是双击，执行第二次点击
-    if double_click:
-        time.sleep(0.1)
-        win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0)
-        time.sleep(0.1)
-        win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP, 0, 0, 0, 0)
+            # 打印所有子窗口信息用于调试
+            print("子窗口信息:")
+            for child in child_windows:
+                child_class = win32gui.GetClassName(child)
+                child_title = win32gui.GetWindowText(child)
+                print(f"子窗口类名: {child_class}, 标题: {child_title}")
 
-    time.sleep(0.2)
-    # 单击
-    # click_at(x, y)
+            # 找到渲染窗口（通常是第一个子窗口）
+            target_hwnd = child_windows[0] if child_windows else hwnd
 
-    # 双击
-    # click_at(x, y, double_click=True)
+            # 获取窗口位置和客户区
+            window_rect = win32gui.GetWindowRect(target_hwnd)
+            client_rect = win32gui.GetClientRect(target_hwnd)
 
-    # 拖动
-    # drag(start_x, start_y, end_x, end_y, duration=0.5)
+            print(f"目标窗口位置: {window_rect}")
+            print(f"客户区大小: {client_rect}")
+
+            # 计算点击位置
+            lParam = win32api.MAKELONG(x, y)
+
+            # 发送完整的消息序列
+            messages = [
+                (win32con.WM_ACTIVATE, win32con.WA_ACTIVE, 0),
+                (win32con.WM_SETFOCUS, 0, 0),
+                (win32con.WM_MOUSEMOVE, 0, lParam),
+                (win32con.WM_MOUSEACTIVATE, target_hwnd, win32api.MAKELONG(win32con.HTCLIENT, win32con.WM_LBUTTONDOWN)),
+                (win32con.WM_LBUTTONDOWN, win32con.MK_LBUTTON, lParam),
+                (win32con.WM_LBUTTONUP, 0, lParam)
+            ]
+
+            # 发送消息序列
+            for msg, wparam, lparam in messages:
+                win32gui.SendMessage(target_hwnd, msg, wparam, lparam)
+                time.sleep(0.05)  # 短暂延迟确保消息被处理
+
+            if double_click:
+                time.sleep(0.1)
+                win32gui.SendMessage(target_hwnd, win32con.WM_LBUTTONDOWN, win32con.MK_LBUTTON, lParam)
+                time.sleep(0.05)
+                win32gui.SendMessage(target_hwnd, win32con.WM_LBUTTONUP, 0, lParam)
+
+        else:  # 其他窗口使用普通方式
+            lParam = win32api.MAKELONG(x, y)
+            win32gui.SendMessage(hwnd, win32con.WM_LBUTTONDOWN, win32con.MK_LBUTTON, lParam)
+            win32gui.SendMessage(hwnd, win32con.WM_LBUTTONUP, 0, lParam)
+
+    except Exception as e:
+        print(f"点击操作失败: {str(e)}")
+        # print(f"窗口类名: {class_name}")
+        # print(f"窗口标题: {window_title}")
+        print(f"目标坐标: ({x}, {y})")
 
 
 def drag(start_x, start_y, end_x, end_y, hwnd, duration=0.5):
-    # window_left, window_top, window_right, window_bottom = win32gui.GetWindowRect(hwnd)
-    # start_x, start_y = window_right - start_x, window_bottom - start_y
-    # end_x, end_y = window_right - end_x, window_bottom - end_y
+    """
+    专门处理 MuMu 模拟器的拖动
+    参数:
+        start_x, start_y: 起始点相对于窗口的坐标
+        end_x, end_y: 结束点相对于窗口的坐标
+        hwnd: 窗口句柄
+        duration: 拖动持续时间
+    """
+    try:
+        # 获取窗口信息
+        class_name = win32gui.GetClassName(hwnd)
+        window_title = win32gui.GetWindowText(hwnd)
 
-    """执行拖动操作"""
-    # 移动到起始位置
-    win32api.SetCursorPos((start_x, start_y))
-    time.sleep(0.1)
+        print(f"Debug - 窗口类名: {class_name}")
+        print(f"Debug - 窗口标题: {window_title}")
 
-    # 按下鼠标
-    win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0)
+        if "Qt" in class_name:  # MuMu模拟器窗口
+            # 查找所有子窗口
+            child_windows = []
+            win32gui.EnumChildWindows(hwnd, lambda hwnd, param: param.append(hwnd), child_windows)
 
-    # 计算移动步骤
-    steps = 20
-    sleep_time = duration / steps
-    dx = (end_x - start_x) / steps
-    dy = (end_y - start_y) / steps
+            # 找到渲染窗口（通常是第一个子窗口）
+            target_hwnd = child_windows[0] if child_windows else hwnd
 
-    # 平滑移动
-    for i in range(steps):
-        x = int(start_x + dx * (i + 1))
-        y = int(start_y + dy * (i + 1))
-        win32api.SetCursorPos((x, y))
-        time.sleep(sleep_time)
+            # 获取窗口位置和客户区
+            window_rect = win32gui.GetWindowRect(target_hwnd)
+            client_rect = win32gui.GetClientRect(target_hwnd)
 
-    # 释放鼠标
-    win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP, 0, 0, 0, 0)
-    time.sleep(0.2)
+            print(f"目标窗口位置: {window_rect}")
+            print(f"客户区大小: {client_rect}")
+
+            # 计算起始和结束位置的lParam
+            start_param = win32api.MAKELONG(start_x, start_y)
+            end_param = win32api.MAKELONG(end_x, end_y)
+
+            # 发送鼠标按下消息序列
+            messages = [
+                (win32con.WM_ACTIVATE, win32con.WA_ACTIVE, 0),
+                (win32con.WM_SETFOCUS, 0, 0),
+                (win32con.WM_MOUSEMOVE, 0, start_param),
+                (win32con.WM_MOUSEACTIVATE, target_hwnd, win32api.MAKELONG(win32con.HTCLIENT, win32con.WM_LBUTTONDOWN)),
+                (win32con.WM_LBUTTONDOWN, win32con.MK_LBUTTON, start_param)
+            ]
+
+            # 发送初始消息序列
+            for msg, wparam, lparam in messages:
+                win32gui.SendMessage(target_hwnd, msg, wparam, lparam)
+                time.sleep(0.05)
+
+            # 计算移动步骤
+            steps = int(duration * 20)  # 每50ms一步
+            sleep_time = duration / steps
+            dx = (end_x - start_x) / steps
+            dy = (end_y - start_y) / steps
+
+            # 发送移动消息
+            for i in range(steps):
+                current_x = int(start_x + dx * (i + 1))
+                current_y = int(start_y + dy * (i + 1))
+                move_param = win32api.MAKELONG(current_x, current_y)
+                win32gui.SendMessage(target_hwnd, win32con.WM_MOUSEMOVE, win32con.MK_LBUTTON, move_param)
+                time.sleep(sleep_time)
+
+            # 发送鼠标释放消息
+            win32gui.SendMessage(target_hwnd, win32con.WM_LBUTTONUP, 0, end_param)
+
+        else:  # 其他窗口使用普通方式
+            start_param = win32api.MAKELONG(start_x, start_y)
+            end_param = win32api.MAKELONG(end_x, end_y)
+
+            # 发送鼠标按下消息
+            win32gui.SendMessage(hwnd, win32con.WM_LBUTTONDOWN, win32con.MK_LBUTTON, start_param)
+
+            # 计算移动步骤
+            steps = int(duration * 20)
+            sleep_time = duration / steps
+            dx = (end_x - start_x) / steps
+            dy = (end_y - start_y) / steps
+
+            # 发送移动消息
+            for i in range(steps):
+                current_x = int(start_x + dx * (i + 1))
+                current_y = int(start_y + dy * (i + 1))
+                move_param = win32api.MAKELONG(current_x, current_y)
+                win32gui.SendMessage(hwnd, win32con.WM_MOUSEMOVE, win32con.MK_LBUTTON, move_param)
+                time.sleep(sleep_time)
+
+            # 发送鼠标释放消息
+            win32gui.SendMessage(hwnd, win32con.WM_LBUTTONUP, 0, end_param)
+
+    except Exception as e:
+        print(f"拖动操作失败: {str(e)}")
+        print(f"窗口类名: {class_name}")
+        print(f"窗口标题: {window_title}")
+        print(f"起始坐标: ({start_x}, {start_y})")
+        print(f"结束坐标: ({end_x}, {end_y})")
 
 
 def set_window_pos(hwnd, x, y, width, height):
@@ -253,7 +464,7 @@ def set_window_pos(hwnd, x, y, width, height):
         try:
             # 如果窗口是最小化状态，先恢复它
             if win32gui.IsIconic(hwnd):
-                win32gui.ShowWindow(hwnd, win32con.SW_RESTORE)
+                # win32gui.ShowWindow(hwnd, win32con.SW_RESTORE)
                 logger.info(f"已恢复最小化窗口")
                 time.sleep(0.1)  # 给窗口一些恢复的时间
 
@@ -264,7 +475,7 @@ def set_window_pos(hwnd, x, y, width, height):
             rect = win32gui.GetWindowRect(hwnd)  # 返回 (left, top, right, bottom)
             left = rect[0]
             top = rect[1]
-            win32gui.SetForegroundWindow(hwnd)
+            # win32gui.SetForegroundWindow(hwnd)
             # 设置窗口大小，保持位置不变
             win32gui.SetWindowPos(hwnd, None, left, top, width, height, win32con.SWP_NOZORDER | win32con.SWP_NOACTIVATE)
             # 设置窗口扩展样式，使其始终保持在最前端
@@ -279,10 +490,6 @@ def set_window_pos(hwnd, x, y, width, height):
             #     logger.info(f"激活窗口时出现警告（不影响使用）: {str(e)}")
 
             title = win32gui.GetWindowText(hwnd)
-            logger.info(f"已设置窗口 '{title}' (句柄: {hwnd}):")
-            logger.info(f"位置: ({x}, {y})")
-            logger.info(f"大小: {width} x {height}")
-            logger.info("已设置为始终保持在最前端")
 
         except Exception as e:
             logger.info(f"设置窗口时出现错误: {str(e)}")
@@ -412,25 +619,46 @@ def ensure_directory_exists(sub_dir, parent_dir=project_root):
         # 如果不存在，则创建子目录
         os.makedirs(full_path)
         print(f"创建目录: {full_path}")
-    else:
-        print(f"目录已存在: {full_path}")
+    # else:
+        # print(f"目录已存在: {full_path}")
 
+def recognize_dahao(hwnds):
+    result = []
+    for hwnd in hwnds:
+        # 识别大号
+        res = recognize_windows(hwnd)
+        result.append(res) if res else False
+        time.sleep(1)
+    return result
 
-def init(prefix='墨迹大侠'):
+def recognize_windows(hwnd):
+    # 截图判断名字
+    text = capture_and_recognize_text(0, 0, 0, 0, hwnd)
+    txt_file = os.path.join(project_root, 'config', 'dahao.txt')
+    data_list = read_txt(txt_file).split(',')
+    if xiayi_list_contain_judge(data_list, str(text)):
+        return hwnd
+    return False
+
+def init(prefix='墨迹大侠', single=True):
     # 找到目标窗口
-    hwnd = get_window_by_title_prefix(prefix)
+    hwnds = get_window_by_title_prefix(prefix, single)
+    if single:
+        hwnds = [hwnds]
+    for hwnd in hwnds:
+        if not hwnd:
+            logger.info("未找到墨迹大侠窗口")
+            return False  # 返回False表示未找到窗口
 
-    if not hwnd:
-        logger.info("未找到墨迹大侠窗口")
-        return False  # 返回False表示未找到窗口
+        title = win32gui.GetWindowText(hwnd)
+        logger.info(f"找到窗口: {title}")
 
-    title = win32gui.GetWindowText(hwnd)
-    logger.info(f"找到窗口: {title}")
-
-    # # 设置窗口大小和位置
-    set_window_pos(hwnd, -6, 0, 568, 1033)
-    time.sleep(1)
-    return hwnd
+        # # 设置窗口大小和位置
+        set_window_pos(hwnd, -6, 0, 568, 1033)
+        time.sleep(1)
+    if single:
+        return hwnds[0]
+    return hwnds
 
 
 def main():
@@ -453,14 +681,31 @@ def main():
     # print (os.path.expandvars('$HOME'))
     # print (os.path.expanduser('~'))
     # project_root = os.path.join(os.path.expanduser('~'), 'xiayi')
-    path = os.path.join(str(project_root), 'imgs', 'capture.png')
+    # path = os.path.join(str(project_root), 'imgs', 'capture.png')
     # path = str(project_root) + "/imgs/capture.png"
     # img.save(path)
     # logger.info("已保存截图到 {}", path)
     # 识别文字
-    text = recognize_text_paddleocr(path)
-    pprint(text)
+    # text = recognize_text_paddleocr(path)
+    # pprint(text)
+    # hwnd = get_window_by_title_prefix('墨迹大侠')
+    # img = capture_window(200, 200, 500, 500, hwnd)
+    # img.save("window_region_capture.png")
+    # text = capture_and_recognize_text(0, 0, 0, 0, hwnd)
+    # pprint(text)
+    while True:
+        click_at(280, 455, 263846)
+        time.sleep(5)
+    # click_at(325, 502, 263846)
+    # click_at(100, 200, 461086)
 
 
 if __name__ == "__main__":
     main()
+
+def click_at_adb(x, y, port="7555"):  # 默认MuMu模拟器端口
+    try:
+        os.system(f"adb connect 127.0.0.1:{port}")
+        os.system(f"adb shell input tap {x} {y}")
+    except Exception as e:
+        print(f"ADB点击失败: {str(e)}")

@@ -21,10 +21,9 @@ def get_rank(hwnd):
 def main():
     hwnd = xiayi.get_window_by_title_prefix("墨迹大侠")
     # 极限排名数组
-    # rank_list = [900, 790, 670, 540, 420, 300, 205, 110, 55, 32, 9, 1]
-    rank_list = [900, 792, 672, 542, 422, 302, 207, 112, 57, 34, 11, 1]
+    rank_list = ['900', '790', '670', '540', '420', '300', '205', '110', '55', '32', '9', '1']
     for i in range(100):
-        text = xiayi.capture_and_recognize_text(175, 194, 212, 215, hwnd, False, True)
+        text = xiayi.capture_and_recognize_text(180, 194, 220, 215, hwnd, False, True)
         pprint('text:{}')
         pprint(text)
         if not text or str(text) == '[None]':

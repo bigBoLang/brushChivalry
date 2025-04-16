@@ -26,7 +26,7 @@ def capture_window(hwnd):
     try:
         # 获取窗口位置
         window_left, window_top, window_right, window_bottom = win32gui.GetWindowRect(hwnd)
-        print(f"窗口位置: 左={window_left}, 上={window_top}, 右={window_right}, 下={window_bottom}")
+        # print(f"窗口位置: 左={window_left}, 上={window_top}, 右={window_right}, 下={window_bottom}")
 
         # 计算要截取的区域（相对于屏幕的绝对坐标）
         x1 = window_left + 120    # 左上角x坐标
@@ -34,7 +34,7 @@ def capture_window(hwnd):
         x2 = window_left + 495   # 右下角x坐标
         y2 = window_top + 869    # 右下角y坐标
 
-        print(f"截图区域: ({x1}, {y1}) -> ({x2}, {y2})")
+        # print(f"截图区域: ({x1}, {y1}) -> ({x2}, {y2})")
 
         # 截取指定区域
         img = ImageGrab.grab(bbox=(x1, y1, x2, y2))

@@ -66,37 +66,41 @@ def jump_to_one(hwnd):
 
 def main():
     # 初始化：找到窗口，设置窗口大小，位置
-    hwnd = xiayi.init()
-    if not hwnd:
+    hwnds = xiayi.init('墨迹大侠', False)
+    if not hwnds:
         return False
 
-    # before_start(hwnd)
+    result = xiayi.recognize_dahao(hwnds)
+    res = list(set(hwnds).difference(set(result)))
+    logger.info('所有句柄:{}', hwnds)
+    logger.info('结果句柄:{}', res)
 
-    for i in range(5):
-        for j in range(2):
-            logger.info('第' + str(i + 1) + '关,' + '第' + str(j + 1) + '次')
-            # 跳到第一关
-            jump_to_one(hwnd)
-            # 下一关
-            next_game(hwnd, (i + 4))
-            # 邀请好友
-            invite(hwnd)
-            # 点击挑战
-            time.sleep(10)
-            pprint('开始')
-            xiayi.click_at(285, 807, hwnd)
-            start = time.time()
-            # 休眠6分钟
-            # 判断结束
-            # 先等6分钟
-            time.sleep(6 * 60)
+    for hwnd in res:
+        before_start(hwnd)
+        for i in range(5):
+            for j in range(2):
+                logger.info('第' + str(i + 1) + '关,' + '第' + str(j + 1) + '次')
+                # 跳到第一关
+                jump_to_one(hwnd)
+                # 下一关
+                next_game(hwnd, (i))
+                # 邀请好友
+                invite(hwnd)
+                # 点击挑战
+                time.sleep(10)
+                pprint('开始')
+                xiayi.click_at(285, 807, hwnd)
+                start = time.time()
+                # 休眠6分钟
+                # 判断结束
+                # 先等6分钟
+                time.sleep(6 * 60)
 
-            # 判断结束，每隔一秒循环截图
-            xiayi.judge_end_and_exit(hwnd)
-            end = time.time()
-            logger.info('用时:' + str(end - start))
-            time.sleep(1)
-
+                # 判断结束，每隔一秒循环截图
+                xiayi.judge_end_and_exit(hwnd)
+                end = time.time()
+                logger.info('用时:' + str(end - start))
+                time.sleep(1)
 
 
 if __name__ == '__main__':
