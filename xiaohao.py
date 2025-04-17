@@ -23,45 +23,45 @@ def before_start(hwnd):
     wait_time = 0
     for i in range(4):
         # 精英
-        xiayi.click_at(325, 292, hwnd)
+        xiayi.click_at(325, 252, hwnd)
         invite(hwnd)
         # 叉号
-        xiayi.click_at(522, 144, hwnd)
+        xiayi.click_at(522, 104, hwnd)
         # # 普通
-        xiayi.click_at(240, 290, hwnd)
+        xiayi.click_at(240, 250, hwnd)
 
 
 def next_game(hwnd, times):
     # 选关
-    xiayi.click_at(279, 456, hwnd)
+    xiayi.click_at(279, 406, hwnd)
     for i in range(times):
         # 右边箭头
         xiayi.click_at(533, 467, hwnd)
     # 选择
-    xiayi.click_at(283, 983, hwnd)
+    xiayi.click_at(283, 933, hwnd)
     time.sleep(1)
 
 
 def invite(hwnd):
     # 加号，邀请好友
-    xiayi.click_at(367, 646, hwnd)
+    xiayi.click_at(367, 606, hwnd)
     # 在线玩家
-    xiayi.click_at(346, 215, hwnd)
+    xiayi.click_at(346, 175, hwnd)
     # 快捷喊话
-    xiayi.click_at(139, 899, hwnd)
+    xiayi.click_at(139, 859, hwnd)
 
 
 def jump_to_one(hwnd):
     time.sleep(1)
     # 精英
-    xiayi.click_at(325, 292, hwnd)
+    xiayi.click_at(325, 252, hwnd)
     # 选关
-    xiayi.click_at(279, 456, hwnd)
+    xiayi.click_at(279, 406, hwnd)
     # 左边箭头
     for i in range(10):
-        xiayi.click_at(26, 469, hwnd)
+        xiayi.click_at(26, 419, hwnd)
     # 选择
-    xiayi.click_at(283, 983, hwnd)
+    xiayi.click_at(283, 933, hwnd)
 
 
 def main():
@@ -83,12 +83,12 @@ def main():
                 # 跳到第一关
                 jump_to_one(hwnd)
                 # 下一关
-                next_game(hwnd, (i))
+                next_game(hwnd, i)
                 # 邀请好友
                 invite(hwnd)
                 # 点击挑战
                 time.sleep(10)
-                pprint('开始')
+                logger.info('开始')
                 xiayi.click_at(285, 807, hwnd)
                 start = time.time()
                 # 休眠6分钟

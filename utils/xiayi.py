@@ -92,7 +92,7 @@ def judge_end_and_exit(hwnd):
             break
         time.sleep(5)
     # 点击退出，继续在系统界面等待
-    click_at(273, 998, hwnd)
+    click_at(92, 61, hwnd)
 
 
 def capture_window_old(x1, y1, x2, y2, hwnd):
@@ -298,8 +298,8 @@ def click_at(x, y, hwnd, double_click=False):
         class_name = win32gui.GetClassName(hwnd)
         window_title = win32gui.GetWindowText(hwnd)
 
-        print(f"Debug - 窗口类名: {class_name}")
-        print(f"Debug - 窗口标题: {window_title}")
+        logger.info(f"Debug - 窗口类名: {class_name}")
+        logger.info(f"Debug - 窗口标题: {window_title}")
 
         if "Qt" in class_name:  # MuMu模拟器窗口
             # 查找所有子窗口
@@ -358,10 +358,11 @@ def click_at(x, y, hwnd, double_click=False):
         # print(f"窗口标题: {window_title}")
         print(f"目标坐标: ({x}, {y})")
 
+    time.sleep(0.5)
 
 def drag(start_x, start_y, end_x, end_y, hwnd, duration=0.5):
     """
-    专门处理 MuMu 模拟器的拖动
+    专门处理不同类型窗口的拖动，不激活窗口
     参数:
         start_x, start_y: 起始点相对于窗口的坐标
         end_x, end_y: 结束点相对于窗口的坐标
@@ -376,7 +377,8 @@ def drag(start_x, start_y, end_x, end_y, hwnd, duration=0.5):
         print(f"Debug - 窗口类名: {class_name}")
         print(f"Debug - 窗口标题: {window_title}")
 
-        if "Qt" in class_name:  # MuMu模拟器窗口
+        # 根据窗口类型选择不同的处理方式
+        if "Qt5" in class_name:  # MuMu模拟器窗口
             # 查找所有子窗口
             child_windows = []
             win32gui.EnumChildWindows(hwnd, lambda hwnd, param: param.append(hwnd), child_windows)
@@ -384,30 +386,15 @@ def drag(start_x, start_y, end_x, end_y, hwnd, duration=0.5):
             # 找到渲染窗口（通常是第一个子窗口）
             target_hwnd = child_windows[0] if child_windows else hwnd
 
-            # 获取窗口位置和客户区
-            window_rect = win32gui.GetWindowRect(target_hwnd)
-            client_rect = win32gui.GetClientRect(target_hwnd)
-
-            print(f"目标窗口位置: {window_rect}")
-            print(f"客户区大小: {client_rect}")
-
             # 计算起始和结束位置的lParam
             start_param = win32api.MAKELONG(start_x, start_y)
             end_param = win32api.MAKELONG(end_x, end_y)
 
-            # 发送鼠标按下消息序列
-            messages = [
-                (win32con.WM_ACTIVATE, win32con.WA_ACTIVE, 0),
-                (win32con.WM_SETFOCUS, 0, 0),
-                (win32con.WM_MOUSEMOVE, 0, start_param),
-                (win32con.WM_MOUSEACTIVATE, target_hwnd, win32api.MAKELONG(win32con.HTCLIENT, win32con.WM_LBUTTONDOWN)),
-                (win32con.WM_LBUTTONDOWN, win32con.MK_LBUTTON, start_param)
-            ]
-
-            # 发送初始消息序列
-            for msg, wparam, lparam in messages:
-                win32gui.SendMessage(target_hwnd, msg, wparam, lparam)
-                time.sleep(0.05)
+            # 直接发送鼠标移动和按下消息，使用PostMessage避免窗口激活
+            win32gui.PostMessage(target_hwnd, win32con.WM_MOUSEMOVE, 0, start_param)
+            time.sleep(0.05)
+            win32gui.PostMessage(target_hwnd, win32con.WM_LBUTTONDOWN, win32con.MK_LBUTTON, start_param)
+            time.sleep(0.05)
 
             # 计算移动步骤
             steps = int(duration * 20)  # 每50ms一步
@@ -420,18 +407,22 @@ def drag(start_x, start_y, end_x, end_y, hwnd, duration=0.5):
                 current_x = int(start_x + dx * (i + 1))
                 current_y = int(start_y + dy * (i + 1))
                 move_param = win32api.MAKELONG(current_x, current_y)
-                win32gui.SendMessage(target_hwnd, win32con.WM_MOUSEMOVE, win32con.MK_LBUTTON, move_param)
+                win32gui.PostMessage(target_hwnd, win32con.WM_MOUSEMOVE, win32con.MK_LBUTTON, move_param)
                 time.sleep(sleep_time)
 
             # 发送鼠标释放消息
-            win32gui.SendMessage(target_hwnd, win32con.WM_LBUTTONUP, 0, end_param)
+            win32gui.PostMessage(target_hwnd, win32con.WM_LBUTTONUP, 0, end_param)
 
-        else:  # 其他窗口使用普通方式
+        elif "Chrome_WidgetWin_0" in class_name:  # 微信小程序窗口
+            # 对于微信小程序窗口，使用不同的消息序列
             start_param = win32api.MAKELONG(start_x, start_y)
             end_param = win32api.MAKELONG(end_x, end_y)
 
-            # 发送鼠标按下消息
-            win32gui.SendMessage(hwnd, win32con.WM_LBUTTONDOWN, win32con.MK_LBUTTON, start_param)
+            # 发送鼠标按下消息，不包含激活相关的消息
+            win32gui.PostMessage(hwnd, win32con.WM_NCHITTEST, 0, start_param)
+            win32gui.PostMessage(hwnd, win32con.WM_SETCURSOR, hwnd, win32api.MAKELONG(win32con.HTCLIENT, win32con.WM_MOUSEMOVE))
+            win32gui.PostMessage(hwnd, win32con.WM_MOUSEMOVE, 0, start_param)
+            win32gui.PostMessage(hwnd, win32con.WM_LBUTTONDOWN, win32con.MK_LBUTTON, start_param)
 
             # 计算移动步骤
             steps = int(duration * 20)
@@ -444,11 +435,36 @@ def drag(start_x, start_y, end_x, end_y, hwnd, duration=0.5):
                 current_x = int(start_x + dx * (i + 1))
                 current_y = int(start_y + dy * (i + 1))
                 move_param = win32api.MAKELONG(current_x, current_y)
-                win32gui.SendMessage(hwnd, win32con.WM_MOUSEMOVE, win32con.MK_LBUTTON, move_param)
+                win32gui.PostMessage(hwnd, win32con.WM_MOUSEMOVE, win32con.MK_LBUTTON, move_param)
                 time.sleep(sleep_time)
 
             # 发送鼠标释放消息
-            win32gui.SendMessage(hwnd, win32con.WM_LBUTTONUP, 0, end_param)
+            win32gui.PostMessage(hwnd, win32con.WM_LBUTTONUP, 0, end_param)
+
+        else:  # 其他窗口
+            start_param = win32api.MAKELONG(start_x, start_y)
+            end_param = win32api.MAKELONG(end_x, end_y)
+
+            # 发送基本的鼠标消息，不包含任何激活相关的消息
+            win32gui.PostMessage(hwnd, win32con.WM_MOUSEMOVE, 0, start_param)
+            win32gui.PostMessage(hwnd, win32con.WM_LBUTTONDOWN, win32con.MK_LBUTTON, start_param)
+
+            # 计算移动步骤
+            steps = int(duration * 20)
+            sleep_time = duration / steps
+            dx = (end_x - start_x) / steps
+            dy = (end_y - start_y) / steps
+
+            # 发送移动消息
+            for i in range(steps):
+                current_x = int(start_x + dx * (i + 1))
+                current_y = int(start_y + dy * (i + 1))
+                move_param = win32api.MAKELONG(current_x, current_y)
+                win32gui.PostMessage(hwnd, win32con.WM_MOUSEMOVE, win32con.MK_LBUTTON, move_param)
+                time.sleep(sleep_time)
+
+            # 发送鼠标释放消息
+            win32gui.PostMessage(hwnd, win32con.WM_LBUTTONUP, 0, end_param)
 
     except Exception as e:
         print(f"拖动操作失败: {str(e)}")
@@ -693,11 +709,14 @@ def main():
     # img.save("window_region_capture.png")
     # text = capture_and_recognize_text(0, 0, 0, 0, hwnd)
     # pprint(text)
-    while True:
-        click_at(280, 455, 263846)
-        time.sleep(5)
+    # while True:
+    # click_at(396, 908, 131614)
+    # click_at(396, 908, 131614)
+    # time.sleep(1)
+    # click_at(475, 226, 131614)
     # click_at(325, 502, 263846)
-    # click_at(100, 200, 461086)
+    # click_at(320, 296, 396254)
+    click_at(320, 255, 396254)
 
 
 if __name__ == "__main__":

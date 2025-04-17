@@ -119,7 +119,8 @@ def goto_system_window(hwnd):
     # 先定位到系统界面
     logger.info('跳转到系统界面!!!!')
     time.sleep(1)
-    xiayi.click_at(392, 908, hwnd)
+    xiayi.click_at(396, 908, hwnd)
+    time.sleep(1)
     xiayi.click_at(475, 226, hwnd)
 
 

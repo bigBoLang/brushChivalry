@@ -20,9 +20,9 @@ def main():
     pprint(text)
     while True:
         # 1.点击锻铸
-        key = '锻铸'
-        xiayi.recognize_and_click(text, hwnd, key)
-        time.sleep(4)
+        # key = '锻铸'
+        # xiayi.recognize_and_click(text, hwnd, key)
+        time.sleep(10)
         # 2.对比属性
         text = xiayi.capture_and_recognize_text(0, 0, 0, 0, hwnd, True)
         pprint('================================================')
@@ -41,18 +41,21 @@ def main():
             # window_left, window_top, window_right, window_bottom = win32gui.GetWindowRect(hwnd)
             # x = window_left + 271
             # y = window_top + 621
-            text = xiayi.capture_and_recognize_text(0, 0, 0, 0, hwnd, True)
-            key = '装备'
-            xiayi.recognize_and_click(text, hwnd, key)
-            """在指定坐标执行点击"""
+            # text = xiayi.capture_and_recognize_text(0, 0, 0, 0, hwnd, True,True)
+            # key = '装备'
+            # xiayi.recognize_and_click(text, hwnd, key)
+            # """在指定坐标执行点击"""
             # win32api.SetCursorPos((x, y))
             # xiayi.click_at(271, 621, hwnd)
             time.sleep(1)
             continue
-        point2 = int(result[index + 3:index + 4])
-        print('index:{}', index)
-        print('point2:{}', point2)
-
+        try:
+            point2 = int(result[index + 3:index + 4])
+            print('index:{}', index)
+            print('point2:{}', point2)
+            point1 = 0
+        except Exception as e:
+            print(e)
         if point2 > point1:
             key = '替换'
             xiayi.recognize_and_click(text, hwnd, key)

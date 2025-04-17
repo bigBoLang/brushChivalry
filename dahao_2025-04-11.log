@@ -28,4 +28,7 @@ Traceback (most recent call last):
 AttributeError: 'NoneType' object has no attribute 'write'
 
 
- pyinstaller --noconfirm --onefile --windowed  --hidden-import "imghdr" --hidden-import "imgaug" --hidden-import "pyclipper" --collect-data "paddle" --collect-data "scipy" --collect-all "paddleocr" --collect-all "lmdb" --hidden-import "tqdm"  "F:\project\brushChivalry\dahao_controller.py"             
+ pyinstaller --noconfirm --onefile --windowed  --hidden-import "imghdr" --hidden-import "imgaug" --hidden-import "pyclipper" --collect-data "paddle" --collect-data "scipy" --collect-all "paddleocr" --collect-all "lmdb" --hidden-import "tqdm"  "F:\project\brushChivalry\dahao_controller.py"
+ pyinstaller --noconfirm --hidden-import "imghdr" --hidden-import "imgaug" --hidden-import "pyclipper" --collect-data "paddle" --collect-data "scipy" --collect-all "paddleocr" --collect-all "lmdb" --hidden-import "tqdm"  "F:\project\brushChivalry\main.py"
+ pyinstaller --noconfirm --hidden-import "imghdr" --hidden-import "imgaug" --hidden-import "pyclipper" --collect-data "paddle" --collect-data "scipy" --collect-all "paddleocr" --collect-all "lmdb" --hidden-import "tqdm"  "F:\project\brushChivalry\dahao.py"
+ pyinstaller --noconfirm --hidden-import "imghdr" --hidden-import "imgaug" --hidden-import "pyclipper" --collect-data "paddle" --collect-data "scipy" --collect-all "paddleocr" --collect-all "lmdb" --hidden-import "tqdm"  "F:\project\brushChivalry\xiaohao.py"
